@@ -15,17 +15,20 @@ import org.mockito.junit.MockitoJUnitRunner;
 public class CalculatorUnitTestMockito {
 	
 	@Mock
-	private Adder adder;
+	private Adder adder; 
 	
 //	Mock the Subtractor dependency	
-//	@Mock
-
+	@Mock
+	private Subtractor subtractor;
+	
 //	Mock the Multiplier dependency	
-//	@Mock 
-
+	@Mock 
+	private Multiplier multiplier;
+	
 //	Mock the Divider dependency	
-//	@Mock
-
+	@Mock
+	private Divider divider;
+	
 	@InjectMocks
 	private Calculator calculator;
 	
@@ -41,17 +44,20 @@ public class CalculatorUnitTestMockito {
 	
 	@Test
 	public void subTest() {
-
+		Mockito.when(subtractor.sub(10, 5)).thenReturn(5);
+		assertEquals(5, calculator.sub(10, 5));  
 	}
 	
 	@Test
 	public void mulTest() {
-
+		Mockito.when(multiplier.mul(5, 5)).thenReturn(25);
+		assertEquals(25, calculator.mul(5, 5));
 	}
 	
 	@Test
 	public void divTest() {
-
+		Mockito.when(divider.div(11, 2)).thenReturn(5.5);
+		assertEquals(5.5, calculator.div(11, 2), 0);
 	}
 	
 }

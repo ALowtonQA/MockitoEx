@@ -26,12 +26,12 @@ public class CalculatorIntegrationTest {
 	
 	@Test
 	public void addTest() {
-		assertEquals(10, calculator.add(5, 5)); 
+		assertEquals(10, calculator.add(5, 5));  
 	}
 	
 	@Test
 	public void subTest() {
-		assertEquals(5, calculator.sub(10, 5)); 
+		assertEquals(5, calculator.sub(10, 5));  
 	}
 	
 	@Test
@@ -41,6 +41,7 @@ public class CalculatorIntegrationTest {
 	
 	@Test
 	public void divTest() {
+		          // expected,   actual,     delta
 		assertEquals(5.5, calculator.div(11, 2), 0);
 	}
 }

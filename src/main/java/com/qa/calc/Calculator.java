@@ -12,20 +12,20 @@ public class Calculator {
 		this.adder = adder;
 		this.subtractor = subtractor;
 		this.multiplier = multiplier; 
-		this.divider = divider; 
-	} 
+		this.divider = divider;  
+	}  
 	
 	public int add(int i, int j) {
-		return adder.add(i, j); 
+		return adder.add(i, j);
 	}
 	
-	public int sub(int i, int j) {
+	public int sub(int i, int j) { 
 		return subtractor.sub(i, j);
 
 	}
 	
 	public int mul(int i, int j) {
-		return multiplier.mul(i, j);
+		return multiplier.mul(i, j); 
 	}
 	
 	public double div(int i, int j) {
